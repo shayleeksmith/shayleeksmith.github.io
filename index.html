@@ -9,60 +9,39 @@
     body {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      background: #0f1115;
-      color: #e6e6e6;
+      background: #f5f0e8;
+      color: #2a2a2a;
       line-height: 1.6;
     }
 
     h1, h2, h3 {
       font-family: "Times New Roman", Times, serif;
       letter-spacing: 0.5px;
-      color: #ffffff;
+      color: #1a1a1a;
     }
 
     p, li {
-      color: #cfcfcf;
+      color: #3a3a3a;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(15, 17, 21, 0.9);
+      background: rgba(245, 240, 232, 0.92);
       padding: 20px 8%;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #ddd;
       z-index: 10;
     }
 
     nav a {
       margin-right: 24px;
       text-decoration: none;
-      color: #aaa;
+      color: #777;
       font-size: 14px;
     }
 
     nav a:hover {
-      color: #fff;
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 70vh;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.3);
+      color: #1a1a1a;
     }
 
     .container {
@@ -87,13 +66,13 @@
     }
 
     .subtitle {
-      color: #aaa;
+      color: #666;
       margin: 12px 0 8px;
       font-size: 16px;
     }
 
     .location-line {
-      color: #8f8f8f;
+      color: #888;
       margin-bottom: 18px;
       font-size: 15px;
     }
@@ -102,13 +81,13 @@
       width: 100%;
       height: 360px;
       object-fit: cover;
-      object-position: 35% 22%;
+      object-position: 50% 20%;
       display: block;
     }
 
     section {
       padding: 50px 0;
-      border-top: 1px solid #222;
+      border-top: 1px solid #ddd;
     }
 
     h2 {
@@ -127,7 +106,7 @@
 
     .project-label {
       font-size: 13px;
-      color: #888;
+      color: #999;
       margin-bottom: 12px;
     }
 
@@ -165,25 +144,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       margin-bottom: 20px;
-      position: relative;
     }
 
     .generator-grid img {
       width: 100%;
-      height: auto;
+      height: 280px;
+      object-fit: contain;
+      background: #f5f0e8;
       display: block;
-      background: #111;
-      padding: 8px;
-    }
-
-    .generator-grid img:nth-child(4) {
-      margin-top: -80px;
-      z-index: 2;
-      position: relative;
     }
 
     .skills-title {
-      color: #ffffff;
+      color: #1a1a1a;
       font-size: 16px;
       margin-top: 20px;
       margin-bottom: 8px;
@@ -199,35 +171,24 @@
     }
 
     .tags {
-      color: #888;
+      color: #999;
       font-size: 14px;
       margin-top: 8px;
     }
 
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 140px;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .contact-photo {
-      margin-top: -20px;
-    }
-
-    .contact-photo img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-
     footer {
       padding: 50px 0 70px;
-      border-top: 1px solid #222;
+      border-top: 1px solid #ddd;
       font-size: 14px;
-      color: #aaa;
+      color: #777;
+    }
+
+    footer h2 {
+      color: #1a1a1a;
+    }
+
+    footer p {
+      color: #555;
     }
 
     @media (max-width: 700px) {
@@ -235,14 +196,9 @@
         font-size: 38px;
       }
 
-      .hero-image {
-        height: 50vh;
-      }
-
       .intro-grid,
       .synth-grid-three,
-      .generator-grid,
-      .contact-wrap {
+      .generator-grid {
         grid-template-columns: 1fr;
       }
 
@@ -252,18 +208,8 @@
 
       .synth-banner img,
       .synth-grid-three img,
-      .intro-image img,
-      .contact-photo img {
+      .intro-image img {
         height: auto;
-      }
-
-      .generator-grid img:nth-child(4) {
-        margin-top: 0;
-      }
-
-      .contact-photo {
-        margin-top: 0;
-        max-width: 180px;
       }
     }
   </style>
@@ -277,10 +223,6 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="hero-image">
-    <img src="oscil.jpg" alt="Oscilloscope waveform">
-  </section>
-
   <div class="container">
 
     <section class="intro" id="about">
@@ -293,7 +235,7 @@
           <div class="location-line">Salem, OR → Bend, OR</div>
 
           <p>
-            I’m interested in circuit design, prototyping, and hands-on engineering work. I enjoy projects that involve building, testing, and debugging physical systems.
+            I'm interested in circuit design, prototyping, and hands-on engineering work. I enjoy projects that involve building, testing, and debugging physical systems.
           </p>
 
           <p>
@@ -301,7 +243,7 @@
           </p>
 
           <p>
-            I work in the campus makerspace where I help students and staff with projects both related and unrelated to engineering, and I am also a teacher’s assistant for a freshman engineering course, where I grade and provide feedback on student coursework.
+            I work in the campus makerspace where I help students and staff with projects both related and unrelated to engineering, and I am also a teacher's assistant for a freshman engineering course, where I grade and provide feedback on student coursework.
           </p>
         </div>
 
@@ -354,10 +296,8 @@
         <div class="project-label">ENGR 103</div>
 
         <div class="generator-grid">
-          <img src="generator-cad.jpg" alt="CAD model of generator">
-          <img src="generator1.jpg" alt="Finished generator exterior">
-          <img src="generator2.jpg" alt="Generator side view">
-          <img src="generator3.jpg" alt="Internal mechanism and electronics">
+          <img src="generator-cad.jpg" alt="CAD model of generator" style="object-position: center center;">
+          <img src="generator1.jpg" alt="Generator with glass cover" style="object-position: center center;">
         </div>
 
         <p>
@@ -377,16 +317,8 @@
 
     <footer id="contact">
       <h2>Contact</h2>
-      <div class="contact-wrap">
-        <div>
-          <p>shaylee.k.smith@gmail.com</p>
-          <p>smiths39@oregonstate.edu</p>
-        </div>
-
-        <div class="contact-photo">
-          <img src="headshot-contact.jpg" alt="Portrait of Shaylee Smith">
-        </div>
-      </div>
+      <p>shaylee.k.smith@gmail.com</p>
+      <p>smiths39@oregonstate.edu</p>
     </footer>
 
   </div>
